@@ -51,16 +51,17 @@ const TIMELINE_DATA: TimelineItem[] = [
   {
     id: "cert-1",
     type: "cert",
-    role: "Core AI & Data Science Certifications",
-    company: "IBM, NPTEL, Microsoft, & LinkedIn",
-    duration: "2022 - 2024",
+    role: "Data Science & AI Certifications",
+    company: "NPTEL, IBM, Microsoft, & LinkedIn",
+    duration: "2022 - 2025",
     responsibilities: [
+      "NPTEL Elite Certification - Data Science for Engineers (IIT Madras, score: 64%, Jan-Mar 2025)",
       "IBM Artificial Intelligence Certification (Specialized credentials in ML workflows)",
-      "NPTEL Data Science for Engineers (Data preprocessing & statistical computing)",
       "Microsoft & LinkedIn Project Management Certification (Agile development methodologies)",
       "Hackathon Participation & Workshops (Completed multiple real-time development events)"
     ],
-    icon: <Award className="w-5 h-5 text-indigo-400" />
+    icon: <Award className="w-5 h-5 text-indigo-400" />,
+    certificateUrl: "/certificate_nptel.jpg"
   },
   {
     id: "edu-2",
