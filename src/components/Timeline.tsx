@@ -53,7 +53,7 @@ const TIMELINE_DATA: TimelineItem[] = [
     type: "cert",
     role: "Data Science & AI Certifications",
     company: "NPTEL, IBM, Microsoft, & LinkedIn",
-    duration: "2022 - 2025",
+    duration: "Jan-Mar 25",
     responsibilities: [
       "NPTEL Elite Certification - Data Science for Engineers (IIT Madras, score: 64%, Jan-Mar 25)",
       "IBM Artificial Intelligence Certification (Specialized credentials in ML workflows)",
