@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { MessageSquare, TrendingUp, FileSpreadsheet, Bot, BrainCircuit, Calendar, Sparkles } from "lucide-react";
+import { MessageSquare, TrendingUp, FileSpreadsheet, Bot, BrainCircuit, Calendar, Sparkles, Award } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -221,7 +221,7 @@ export default function Internship() {
           </div>
           
           {/* Organization Badge */}
-          <div className="reveal-text flex flex-col items-start md:items-end text-left md:text-right gap-1 shrink-0">
+          <div className="reveal-text flex flex-col items-start md:items-end text-left md:text-right gap-1.5 shrink-0">
             <span className="px-3.5 py-1.5 bg-purple-500/10 border border-purple-500/25 text-purple-400 text-xs font-mono font-bold tracking-widest rounded-full uppercase">
               FUTURE INTERN
             </span>
@@ -229,6 +229,15 @@ export default function Internship() {
               <Calendar className="w-4 h-4 text-purple-500" />
               Machine Learning Intern
             </span>
+            <a
+              href="/certificate_future_intern.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-purple-500/10 border border-purple-500/20 hover:border-purple-500/40 text-[10px] text-purple-400 hover:text-purple-300 font-mono font-extrabold tracking-wider rounded-xl transition-all"
+            >
+              <Award className="w-3.5 h-3.5 text-purple-400" />
+              VIEW CERTIFICATE
+            </a>
           </div>
         </div>
 

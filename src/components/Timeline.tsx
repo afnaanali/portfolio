@@ -15,6 +15,7 @@ interface TimelineItem {
   duration: string;
   responsibilities: string[];
   icon: React.ReactNode;
+  certificateUrl?: string;
 }
 
 const TIMELINE_DATA: TimelineItem[] = [
@@ -31,7 +32,8 @@ const TIMELINE_DATA: TimelineItem[] = [
       "Utilized Python libraries and tools to build predictive models and automate data-driven decision-making.",
       "Gained hands-on experience in artificial intelligence, deep learning concepts, and software development practices."
     ],
-    icon: <Briefcase className="w-5 h-5 text-purple-400" />
+    icon: <Briefcase className="w-5 h-5 text-purple-400" />,
+    certificateUrl: "/certificate_pacelab.jpg"
   },
   {
     id: "edu-1",
@@ -206,7 +208,6 @@ export default function Timeline() {
                     {item.duration}
                   </span>
                 </div>
-
                 {/* Event responsibility logs */}
                 <ul className="flex flex-col gap-2.5 list-disc pl-4 select-text">
                   {item.responsibilities.map((resp, idx) => (
@@ -215,6 +216,20 @@ export default function Timeline() {
                     </li>
                   ))}
                 </ul>
+
+                {item.certificateUrl && (
+                  <div className="mt-6 pt-4 border-t border-white/5 flex justify-start">
+                    <a
+                      href={item.certificateUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-white/5 border border-white/10 hover:border-purple-500/50 hover:bg-purple-500/10 text-xs text-slate-300 hover:text-white font-mono font-semibold rounded-lg transition-all"
+                    >
+                      <Award className="w-3.5 h-3.5 text-purple-400" />
+                      View Certificate
+                    </a>
+                  </div>
+                )}
 
               </div>
 
