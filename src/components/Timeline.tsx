@@ -3,13 +3,13 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { BookOpen, Briefcase, Award, GraduationCap } from "lucide-react";
+import { BookOpen, Briefcase, Award, GraduationCap, Heart } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 interface TimelineItem {
   id: string;
-  type: "work" | "education" | "cert";
+  type: "work" | "education" | "cert" | "project";
   role: string;
   company: string;
   duration: string;
@@ -19,6 +19,20 @@ interface TimelineItem {
 }
 
 const TIMELINE_DATA: TimelineItem[] = [
+  {
+    id: "acad-project-1",
+    type: "project",
+    role: "App Developer",
+    company: "Medical Assistance System (Team Mini Project)",
+    duration: "2026",
+    responsibilities: [
+      "Developed the mobile application interface using Flutter, designing highly responsive, user-friendly healthcare panels.",
+      "Implemented health parameters tracking and logs storage (Blood Pressure, Heart Rate, Glucose) utilizing Firebase.",
+      "Collaborated on backend APIs integration, navigation flows, and AI symptom-based disease prediction services.",
+      "Optimized overall mobile application performance, interface transitions, and user interaction layouts."
+    ],
+    icon: <Heart className="w-5 h-5 text-cyan-400" />
+  },
   {
     id: "work-1",
     type: "work",
@@ -162,7 +176,7 @@ export default function Timeline() {
             CHRONOLOGICAL PATHWAY
           </span>
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-black font-display text-white tracking-tight uppercase leading-none">
-            Experience Timeline
+            Experience & Academic Projects
           </h2>
         </div>
 
